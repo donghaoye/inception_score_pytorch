@@ -58,6 +58,14 @@ class InceptionScore:
         ----------
         imgs : numpy array
             array of the shape (N, X, Y, C)
+        batch_size : int
+            batch size for the prediction with the inception net
+        splits : int
+            The inception score is computed for a package of images.
+            The variable 'splits' defines the number of these packages.
+            Multiple computations of the score (for each package one) are 
+            needed to compute a standard diviation (error) for the final
+            score.
         """
         
         # preprocess images
